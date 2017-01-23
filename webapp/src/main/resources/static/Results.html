@@ -1,0 +1,46 @@
+<style> 
+
+.fourdiv{
+float:left;
+width:25%;
+overflow:hidden;
+text-align: center;
+border: solid;
+border-width: thin;
+} 
+.searchInput{
+text-align: center;
+}
+
+.divHeading{
+font-weight: bold;
+text-align: center;
+border: solid;
+border-width: thin;
+}
+.row:nth-child(odd) {background: #e0e0e0;}
+</style>
+<div>
+ <p class="searchInput"> <input type="text"  placeholder="Search By Name" ng-model="searchByName"></p>
+</div>
+<div ng-controller="resultsCtrl">
+  <div class="divHeading">
+  <div class="fourdiv"> <p>Name</p></div>
+  <div class="fourdiv"> <p>ActionName</p></div>
+  <div class="fourdiv"><p>result status</p></div>
+  <div class="fourdiv">  <p>class Name</p></div>
+  </div>
+  
+  <div ng-repeat="res in results |filter:searchByName">
+  <div class"row">
+  <div ng-repeat="res1 in res.subResultForm">
+   <div class="fourdiv"> <p>{{res.groupName}}</p></div>
+  <div class="fourdiv"> <p>{{res1.methodName}}</p></div>
+  <div class="fourdiv"><p>{{res1.status | resultstatus}}</p></div>
+  <div class="fourdiv"> <p>{{res1.className}} </p></div>
+  </div>
+ </div>
+</div>
+ </div>
+
+ 

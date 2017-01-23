@@ -1,0 +1,174 @@
+aside, article, section, header, footer, nav { 
+    display: block; 
+} 
+html, body { 
+    margin: 0; 
+    padding: 0; 
+} 
+html { 
+     background: rgb(214, 214, 213);
+} 
+body { 
+    width: 100%; 
+    background: cornsilk; 
+    margin: 0 auto 0em; 
+    font: 100% Georgia, "Times New Roman", Times, serif; 
+} 
+header { 
+    background: rgb(6, 1, 68);   
+    margin-bottom: 0px; 
+	height :100px;
+} 
+header h1 { 
+    font: normal 2em Arial, Helvetica, sans-serif; 
+    color: red; 
+    text-align: center; 
+    line-height: 3em; 
+    text-transform: uppercase; 
+    letter-spacing:.1em; 
+    margin: 0; 
+} 
+.col1 {      
+    height: 500px; 
+    float: right; 
+    padding: 20px; 
+    width: 90%; 
+    margin-bottom: 20px; 
+    font-size:14px;
+} 
+.col2 { 
+    background: rgb(37, 37, 78); 
+    height: 700px; 
+    float: left; 
+    padding: 0px; 
+    width: 10%; 
+    margin-bottom: 10px; 
+       
+	
+} 
+footer { 
+    background: rgb(100, 98, 102); 
+    line-height: 3em; 
+    font-size: .6em; 
+    color: white; 
+    padding: 0 2em; 
+    clear: both; 
+} 
+.multi-ani {
+  -webkit-animation: rattle 0.08s infinite alternate; 
+  color: $color;
+  font-family: 'Jolly Lodger', cursive;
+  font-size: 2em;
+  text-align: center;
+  text-shadow: 0 4px 0 #000, 
+    -2px -2px 0 $bgColor,
+    -3px -3px 0 $color;
+}
+.shadow {
+   color: white;
+   font-family: 'Jolly Lodger', cursive;
+   /* font: bold 52px Helvetica, Jolly Lodger, Sans-Serif; */
+   font-size: 3em;
+   text-align: center;
+   text-shadow: 1px 1px #fe4902, 
+                2px 2px #fe4902, 
+                3px 3px #fe4902;
+   -webkit-transition: all 0.12s ease-out;
+   -moz-transition:    all 0.12s ease-out;
+   -ms-transition:     all 0.12s ease-out;
+   -o-transition:      all 0.12s ease-out;
+}
+.shadow:hover {
+   position: relative; 
+   top: -3px; 
+   left: -3px; 
+   text-shadow: 1px 1px #fe4902, 
+                2px 2px #fe4902, 
+                3px 3px #fe4902, 
+                4px 4px #fe4902, 
+                5px 5px #fe4902, 
+                6px 6px #fe4902;
+}
+
+.ulshadow { 
+   color: white; 
+    font-family: 'Jolly Lodger', cursive;
+   font: bold 12px; 
+    letter-spacing:.1em; 
+	font-size: 1em;
+  text-align: center;
+   text-shadow: 1px 1px #fe4902, 
+                2px 2px #fe4902, 
+                3px 3px #fe4902;
+   -webkit-transition: all 0.12s ease-out;
+   -moz-transition:    all 0.12s ease-out;
+   -ms-transition:     all 0.12s ease-out;
+   -o-transition:      all 0.12s ease-out;
+}
+.lishadow:hover {
+   position: relative; 
+   top: -2px; 
+   left: -2px; 
+   text-shadow: 1px 1px #fe4902, 
+                2px 2px #fe4902, 
+                3px 3px #fe4902, 
+                4px 4px #fe4902, 
+                5px 5px #fe4902, 
+                6px 6px #fe4902;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100px;
+    //background-color: rgb(179, 255, 184);
+       font-size:20px;
+
+   
+}
+
+li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+    color:#B604FE; 
+  
+}
+
+/* Change the link color on hover */
+li a:hover {
+    background-color: #555;
+    color: white;
+}
+.Row
+{
+    display: table;
+    width: 100%; /*Optional*/
+    table-layout: fixed; /*Optional*/
+    border-spacing: 3px; /*Optional*/
+}
+.Column
+{
+    display: table-cell;
+    background-color:#f55c5c; /*Optional*/
+    color:blue;
+}
+.Column:hover{
+    background-color:rgb(142, 226, 249);;
+    color: #f70303;
+}
+.droptarget {  
+  overflow: auto;
+   width: 500px; 
+    height: 335px;
+    margin: 15px;
+    padding: 10px;
+    border: 1px solid #aaaaaa;
+}
+.droptargetright {
+     margin: 15px;
+    padding: 10px;
+	overflow: auto
+ }
+ 

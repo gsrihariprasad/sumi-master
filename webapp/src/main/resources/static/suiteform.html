@@ -1,0 +1,68 @@
+	
+	<style>
+div.abc {
+  transition: all linear 0.5s;
+  background-color: lightblue;
+ /*  height: 100px;
+  width: 100%;
+  */ position: relative;
+  top: 0;
+  left: 0;
+}
+
+.ng-hide {
+  height: 0;
+  width: 0;
+  background-color: transparent;
+  top:-200px;
+  left: 200px;
+}
+</style>
+	<form ng-controller="suiteformCtrl">
+	<div>
+	<p id="gname"></p>
+	<div>
+	 url:<select>
+   <option ng-repeat="row in urls" value="{{row}}">{{row}}</option>
+   </select>
+   environment:<select>
+   <option ng-repeat="eenv in env" value="{{eenv}}">{{eenv}}</option>
+   </select>
+   <p>DriverPath : <input type="text"  ng-model="driverPath"  value="driverPath"> </input></p>
+	 <p>Name : <input type="text"  ng-model="groupName"  value="groupName" ng-blur="onblur_check_groupname()"> </input></p>
+	<p>ExecutionTime: <input type="datetime-local" ng-model="executedaytime"></input></p>
+			<div ng-repeat="rx in thinkworks track by $index">
+			<table border="1" ng-repeat="r in rx track by $index">
+					<tr>
+						<td width="150px">{{r.pageName}}
+						<input type="checkbox" name="pageName"
+							value="{{pageName}}" ng-checked="yes" ng-model="myVar" ng-click="addID(r.pageName ,myVar)"> </input>
+						</td>
+
+						<td width="700px">
+							<!--  | filter:{'fieldlength':  2}:true -->
+								<div ng-repeat="y in r">
+									<div class="abc" ng-repeat="(key,value) in y " ng-show="myVar">
+										<table>
+											<tr>
+												<td id="{{ key }}"  width="40%">{{ key }} :</td>
+												<td width="60%"><input type="text" value="{{value}}" id="{{value}}"  ng-blur="onblurchangevalue(key,this.value,$index,y)">
+												</input></td>
+											</tr>
+										</table>
+									</div>
+								
+							</div>
+						</td>
+					</tr>
+				</table>
+			</div>
+			
+			{{testcasename}}
+			</div>
+			<div>
+ <input type="submit" id="submit" class="btn btn-primary" value="Submit" ng-click="submit(groupName,executedaytime,driverPath)"></input>
+ </div>
+ <div>
+</form>
+	
